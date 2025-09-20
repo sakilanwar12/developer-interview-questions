@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="w-full p-4 bg-gray-100 shadow">
+    <header className="w-full p-4 bg-popover shadow">
       <nav className="max-w-5xl mx-auto flex justify-between items-center">
         <a href="/" className="text-xl font-bold">
           MySite
