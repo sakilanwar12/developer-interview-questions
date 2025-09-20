@@ -1,6 +1,12 @@
 ---
-import "../../styles/global.css";
-import Header from "./Header";
+import "../../../styles/global.css";
+import "@fontsource/space-grotesk/400.css"; 
+import "@fontsource/space-grotesk/700.css"; 
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/700.css";
+
+import Header from "./../Header";
+import Footer from "./../Footer";
 const {
   title = "Default Site Title",
   description = "Default description for SEO",
@@ -34,15 +40,10 @@ const {
   <body class="min-h-screen flex flex-col">
     <Header />
 
-    <!-- ✅ Page content -->
     <main class="flex-1 max-w-5xl mx-auto p-4">
       <slot />
-      <!-- 👈 where page content goes -->
     </main>
 
-    <!-- ✅ Global footer -->
-    <footer class="w-full p-4 bg-gray-100 text-center text-sm text-gray-600">
-      © {new Date().getFullYear()} MySite. All rights reserved.
-    </footer>
+    <Footer />
   </body>
 </html>

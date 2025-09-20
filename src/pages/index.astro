@@ -1,11 +1,14 @@
 ---
-import MainLayout from "@/components/layouts/MainLayout.astro";
+import MainLayout from "@/components/partial/layouts/MainLayout.astro";
 
 import { Button } from "@/components/ui/button";
 ---
 
-<MainLayout title="Home | MySite" description="Best place to find developer interview questions">
-  <h1 class="text-3xl font-bold">Welcome 🚀</h1>
-  <p class="mt-2 text-gray-600">Your hub for coding interview prep</p>
+<MainLayout
+  title="Home | MySite"
+  description="Best place to find developer interview questions"
+>
+  <h1 class="text-3xl font-space-grotesk font-bold">Welcome 🚀</h1>
+  <p class="mt-2 text-gray-600 ">Your hub for coding interview prep</p>
   <Button>Get Started</Button>
 </MainLayout>
