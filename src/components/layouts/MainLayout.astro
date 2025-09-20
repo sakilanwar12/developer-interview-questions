@@ -1,0 +1,48 @@
+---
+import "../../styles/global.css";
+import Header from "./Header";
+const {
+  title = "Default Site Title",
+  description = "Default description for SEO",
+  image = "/default-og.png",
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <Header />
+
+    <!-- ✅ Page content -->
+    <main class="flex-1 max-w-5xl mx-auto p-4">
+      <slot />
+      <!-- 👈 where page content goes -->
+    </main>
+
+    <!-- ✅ Global footer -->
+    <footer class="w-full p-4 bg-gray-100 text-center text-sm text-gray-600">
+      © {new Date().getFullYear()} MySite. All rights reserved.
+    </footer>
+  </body>
+</html>
