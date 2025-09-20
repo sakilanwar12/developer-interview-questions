@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-space-grotesk:'Space Grotesk', sans-serif;
-  --font-inter:'Inter', 'sans-serif';
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-inter: "Inter", "sans-serif";
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -29,9 +29,8 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-
-  --color-default:var(--default);
-  --color-default-50:var(--default-50);
+  --color-default: var(--default);
+  --color-default-50: var(--default-50);
 }
 
 :root {
@@ -42,7 +41,7 @@
   --card-foreground: oklch(0.13 0.028 261.692);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.13 0.028 261.692);
-  --primary: #341BAB;
+  --primary: #341bab;
   --primary-foreground: oklch(0.985 0.002 247.839);
   --secondary: oklch(0.967 0.003 264.542);
   --secondary-foreground: oklch(0.21 0.034 264.665);
@@ -55,10 +54,8 @@
   --input: oklch(0.928 0.006 264.531);
   --ring: oklch(0.707 0.022 261.325);
 
-
-  --default:#101828;
-  --default-50:#667085;
-;
+  --default: #101828;
+  --default-50: #667085;
 }
 
 .dark {
@@ -80,15 +77,25 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.551 0.027 264.364);
+}
 
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @variant xl {
+    max-width: 1210px;
+  }
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 transition-all duration-300;
+  }
+  html{
+    scroll-behavior: smooth;
   }
   body {
     @apply font-inter bg-background text-foreground;
   }
-
 }
