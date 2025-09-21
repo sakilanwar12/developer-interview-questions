@@ -98,4 +98,16 @@
   body {
     @apply font-inter bg-background text-foreground;
   }
+  h1,h2,h3,h4,h4,h5,h6{
+    @apply font-space-grotesk font-bold;
+  }
+ .blog-wrapper h3{
+    @apply text-xl  text-default mb-2;
+  }
+  .blog-wrapper p{
+    @apply text-base font-normal text-default-50 mb-1;
+  }
+  .blog-wrapper hr{
+    @apply my-6;
+  }
 }

@@ -1,14 +1,22 @@
 ---
 import MainLayout from "@/components/partial/layouts/MainLayout.astro";
-
-import { Button } from "@/components/ui/button";
+import JavaScriptOne from "@/contents/javascript.mdx";
 ---
 
 <MainLayout
   title="JavaScript"
   description="Best place to find developer interview questions"
 >
-  <h1 class="text-3xl font-space-grotesk font-bold">Welcome 🚀</h1>
-  <p class="mt-2 text-gray-600 ">Your hub for coding interview prep</p>
-  <Button>Get Started</Button>
+  <div class="grid grid-cols-12 border-s border-border min-h-[calc(100vh-80px)]">
+    <div class="col-span-8 py-6">
+      <div class="blog-wrapper p-4">
+        <JavaScriptOne />
+      </div>
+    </div>
+    <div class="col-span-4 border-s border-border min-h-[calc(100vh-80px)]">
+      <div class="py-8 ps-4 bg-gray-100/40">
+        <h3>Other Guides</h3>
+      </div>
+    </div>
+  </div>
 </MainLayout>

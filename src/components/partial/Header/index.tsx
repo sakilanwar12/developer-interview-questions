@@ -4,7 +4,7 @@ import Nav from "./Nav";
 
 function Header() {
   return (
-    <header className="w-full p-4 bg-popover border-b border-border shadow">
+    <header className="w-full p-4  border-b border-border shadow">
       <div className="container">
         <div className="flex">
           <AppLogo />

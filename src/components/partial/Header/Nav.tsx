@@ -5,7 +5,7 @@ function Nav() {
     <nav>
       <ul className="flex gap-4">
         {menus?.map((item) => (
-          <li>
+          <li key={item.value}>
             <a href={item.value} className="text-base text-default-50 hover:text-primary">
               {item.label}
             </a>
